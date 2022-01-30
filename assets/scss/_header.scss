@@ -18,7 +18,7 @@
 .menu-main {
   display: none;
   flex: 0;
-  @include breakpoint('small') {
+  @include breakpoint('tiny') {
     display: block;
   }
   > ul {
