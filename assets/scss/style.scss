@@ -27,7 +27,7 @@ $breakpoints: (
 @import 'pagination';
 @import 'pygments/github';
 
-html, body {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -36,18 +36,13 @@ body {
   font-family: var(--font-family-paragraph);
   color: var(--text-color);
   margin: 0;
-  padding: 30px;
   overflow-x: hidden;
-  @include breakpoint('small') {
-    padding: 50px;
-  }
-  &.frame {
-    min-height: 100vh;
-    border: 18px solid var(--highlight-color);
-  }
+
+
 }
 
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
+  padding-top: 8em;
 }

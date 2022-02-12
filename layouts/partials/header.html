@@ -1,13 +1,17 @@
-<div class='header'>
-  <a class="header-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-  <div class="menu-main">
-    <ul>
+<header>
+  <img src="/img/rotex_white_xs.png" alt="Das Logo von Rotex 1800 e.V.">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-            <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
-                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-            </li>
+        <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent " main" . }} active{{ end }}">
+          <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        </li>
         {{end}}
-    </ul>
-  </div>
-</div>
+      </ul>
+    </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
