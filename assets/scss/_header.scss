@@ -6,11 +6,14 @@ header {
   z-index: 999;
   width: 100%;
   padding: 10px;
+  display: flex;
 }
 
 header img {
-  height: 70%;
+  height: 100%;
   width: auto;
+  max-width: 30vw;
+  margin-left: 6em;
   align-self: center;
 }
 
